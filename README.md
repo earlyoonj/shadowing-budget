@@ -1,2 +1,2 @@
 # shadowing-budget
-Budget planner and expense tracker
+Budget planning based expense tracker
