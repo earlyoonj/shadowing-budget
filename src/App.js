@@ -1,5 +1,7 @@
+import Budget from './components/Screens/Budget/BudgetLayout/Budget';
+
 function App() {
-    return <div></div>;
+    return <Budget />;
 }
 
 export default App;
