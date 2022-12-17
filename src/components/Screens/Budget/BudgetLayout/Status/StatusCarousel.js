@@ -5,7 +5,7 @@ import TotalStatus from './TotalStatus';
 
 function StatusCarousel(props) {
     return (
-        <Carousel>
+        <Carousel id="status" initialIndex="2" width="20rem">
             <DateStatus />
             <TotalStatus />
             <CategoryStatus />
