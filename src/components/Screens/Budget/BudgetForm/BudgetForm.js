@@ -1,5 +1,7 @@
+import PageForm from '../../../UI/Forms/PageForm';
+
 function BudgetForm(props) {
-    return <form></form>;
+    return <PageForm></PageForm>
 }
 
 export default BudgetForm;

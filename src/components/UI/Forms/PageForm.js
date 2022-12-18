@@ -1,5 +1,5 @@
-function FullScreenForm(props) {
+function BudgetForm(props) {
     return <form></form>;
 }
 
-return FullScreenForm;
+export default BudgetForm;
