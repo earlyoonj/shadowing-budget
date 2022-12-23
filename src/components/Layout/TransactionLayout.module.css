@@ -1,0 +1,56 @@
+nav {
+    position: inherit;
+    width: 80%;
+    margin: 0 auto;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+nav ul li a {
+    color: inherit;
+}
+
+nav ul li:after {
+    content: '';
+    display: block;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.active {
+    border-top: 1px solid #0e0e0e;
+    color: #0e0e0e;
+}
+
+.active {
+    pointer-events: none;
+}
+
+.active::after {
+    background-color: #0e0e0e;
+}
+
+
+nav input {
+    display: none;
+}
+
+nav label {
+    cursor: pointer;
+}
