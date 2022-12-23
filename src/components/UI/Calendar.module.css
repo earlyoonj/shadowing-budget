@@ -1,0 +1,49 @@
+.calendar {
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.calendar tbody {
+    overflow-y: scroll;
+}
+
+.day {
+    font-size: 0.6rem;
+}
+
+.month {
+    height:0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.date {
+    position: relative;
+    padding-top: 0.3rem;
+    font-size: 0.8rem;
+    height: 4rem;
+    vertical-align: top;
+    font-weight: 300;;
+}
+
+.date:hover {
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f6f6f6;
+    border-radius: 2rem;
+}
+
+.date:hover::after {
+    content: '+';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.3rem;
+    display: block;
+    margin: auto;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    cursor: pointer;
+}
