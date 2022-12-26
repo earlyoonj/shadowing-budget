@@ -1,3 +1,13 @@
+@import './colors.css';
+
+:root {
+    --primary: #0e0e0e;
+    --secondary: #eaeaea;
+    --secondary-text: #d9d9d9;
+    --tertiary-text: #7b7575;
+    --background: #f6f6f6;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +15,132 @@
 }
 
 html,
-body {
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: --primary;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+
+ul, ol, li {
+    list-style-type: none;
+}
+
+.page {
+    margin: 0 3rem;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.page h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* button */
+.button__primary {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+/* nav-tab */
+.nav-tab {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-tab input {
+    display: none;
+}
+
+.nav-tab label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.3rem 0;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+.nav-tab input:checked + label {
+    border-top: 0.1rem solid --primary;
+    color: --primary;
+}
+
+.nav-tab input:checked + label::after {
+    display: flex;
+    flex-direction: column;
+    content: '';
+    margin: 0.4rem auto;
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    background: --primary;
+}
+
+/* input-field */
+.input-field {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+.input-field label {
+    font-weight: 500;
+}
+
+.input-field input,
+.input-field select {
+    background-color: #f6f6f6;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* checkbox-field */
+.checkbox-field input {
+    display: none;
+}
+
+.checkbox-field label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-field label::before {
+    content: '';
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 0.2rem;
+    margin-right: 0.1rem;
+    background-color: var(--background);
+}
+
+.checkbox-field input:checked + label::before {
+    content: 'V';
+    font-size: 0.1rem;
+    text-align: center;
+    color: var(--tertiary-text);
 }

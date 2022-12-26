@@ -3,6 +3,8 @@
     "defaultLocale": "ko",
     "pages": {
         "*": ["common"],
-        "/": ["index"]
+        "/": ["index"],
+        "/budget": ["budget"],
+        "/budget/form": ["budget-form"]
     }
 }

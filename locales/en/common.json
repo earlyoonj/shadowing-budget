@@ -1,1 +1,10 @@
-{ }
+{ 
+    "period": "Period",
+    "date": "Date",
+    "title": "Title",
+    "amount": "Amount",
+    "budget-amount": "Budget Amount",
+    "category": "Category",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+}

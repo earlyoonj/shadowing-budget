@@ -1,1 +1,10 @@
-{}
+{ 
+    "period": "기간",
+    "date": "날짜",
+    "title": "제목",
+    "amount": "금액",
+    "budget-amount": "예산 금액",
+    "category": "분류",
+    "confirm": "완료",
+    "cancel": "취소" 
+}

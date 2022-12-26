@@ -1,0 +1,41 @@
+@value colors: './colors.css';
+@value PRIMARY, SECONDARY, SECONDARY_TEXT, TERTIARY_TEXT, BACKGROUND from colors;
+
+.item {
+    background-color: BACKGROUND;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.info p {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.info h5 {
+    font-size: 1.6rem;
+}
+
+.schedule {
+    color: TERTIARY_TEXT;
+    font-size: 0.9rem;
+}
+
+.current {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.budget {
+    font-size: 0.8rem;
+    color: SECONDARY_TEXT;
+}

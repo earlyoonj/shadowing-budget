@@ -1,0 +1,32 @@
+@value colors: './colors.css';
+@value PRIMARY, SECONDARY, SECONDARY_TEXT from colors;
+
+
+.radio-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.radio-controls input {
+    display: none;
+}
+
+.radio-controls label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-top: 2px solid SECONDARY;
+    color: SECONDARY_TEXT;
+    cursor: pointer;
+}
+
+.radio-controls input:checked + label {
+    color: PRIMARY;
+    border-color: PRIMARY;
+}
+
+.button {
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
