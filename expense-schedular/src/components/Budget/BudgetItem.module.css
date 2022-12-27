@@ -1,0 +1,41 @@
+.item {
+    background-color: var(--background);
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.info p {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.info h5 {
+    font-size: 1.6rem;
+}
+
+.schedule {
+    color: var(--tertiary-text);
+    font-size: 0.9rem;
+}
+
+.current {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.budget {
+    font-size: 0.8rem;
+    color: var(--secondary-text);
+}
