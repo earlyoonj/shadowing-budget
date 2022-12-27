@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.carouselList {
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carouselList::-webkit-scrollbar {
+    display: none;
+}
+
+.carouselItem {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.carouselNav {
+    display: flex;
+    width: 4rem;
+    justify-content: space-around;
+}
+
+.carouselNav button {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+.carouselNav .active {
+    cursor: inherit;
+    background-color: #0e0e0e;
+}

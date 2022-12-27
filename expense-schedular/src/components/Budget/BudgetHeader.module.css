@@ -1,0 +1,14 @@
+.header {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.date {
+    font-weight: 700;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
