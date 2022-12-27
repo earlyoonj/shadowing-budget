@@ -36,3 +36,24 @@ ol,
 li {
     list-style-type: none;
 }
+
+.page {
+    margin: 0 2rem;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.page h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* buttons */
+.button__primary {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
