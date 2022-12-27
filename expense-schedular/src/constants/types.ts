@@ -1,6 +1,6 @@
-const BUDGET_TYPES = {
+const BUDGET_TYPE = {
     REPEATING: 'repeating',
     EVENT: 'event',
 };
 
-export { BUDGET_TYPES };
+export { BUDGET_TYPE };

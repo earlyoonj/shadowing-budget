@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import BudgetItem from '../../components/Budget/BudgetItem';
-import { BUDGET_TYPES } from '../../constants/types';
+import { BUDGET_TYPE } from '../../constants/types';
 import Amount from '../../models/Amount';
 import classes from './BudgetList.module.css';
 
@@ -16,7 +16,7 @@ function BudgetList() {
     const budgets = [
         {
             id: '01',
-            type: BUDGET_TYPES.REPEATING,
+            type: BUDGET_TYPE.REPEATING,
             startDate: new Date(2022, 11, 1),
             endDate: new Date(2022, 11, 31),
             amount: new Amount(0, 0, 0),
@@ -25,9 +25,9 @@ function BudgetList() {
 
     const filteredBudget = budgets.filter((budget: any) => {
         if (isRepeating) {
-            return budget.type === BUDGET_TYPES.REPEATING;
+            return budget.type === BUDGET_TYPE.REPEATING;
         } else {
-            return budget.type === BUDGET_TYPES.EVENT;
+            return budget.type === BUDGET_TYPE.EVENT;
         }
     });
 
@@ -39,7 +39,7 @@ function BudgetList() {
                     id="repeating-select"
                     type="radio"
                     name="budget-type"
-                    value={BUDGET_TYPES.REPEATING}
+                    value={BUDGET_TYPE.REPEATING}
                     onChange={changeTabHandler}
                     checked={isRepeating}
                 />
@@ -48,7 +48,7 @@ function BudgetList() {
                     id="event-select"
                     type="radio"
                     name="budget-type"
-                    value={BUDGET_TYPES.EVENT}
+                    value={BUDGET_TYPE.EVENT}
                     onChange={changeTabHandler}
                     checked={!isRepeating}
                 />
@@ -70,7 +70,7 @@ function BudgetList() {
             </ol>
             <a
                 href={`/budget/form?type=${
-                    isRepeating ? BUDGET_TYPES.REPEATING : BUDGET_TYPES.EVENT
+                    isRepeating ? BUDGET_TYPE.REPEATING : BUDGET_TYPE.EVENT
                 }`}
                 className={`button__primary ${classes.button}`}
             >
