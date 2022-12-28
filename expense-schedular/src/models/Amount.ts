@@ -2,9 +2,9 @@
 const amountUnit = '원';
 
 class Amount {
-    _current: number;
-    _scheduled: number;
-    _budget: number;
+    private _current: number;
+    private _scheduled: number;
+    private _budget: number;
 
     get current() {
         return this._current;
@@ -38,6 +38,14 @@ class Amount {
     };
     getBudgetStr = () => {
         return `/${this._budget.toLocaleString()}${amountUnit}`;
+    };
+
+    getCurrentDeg = () => {
+        return (this._current / this._budget) * 360;
+    };
+
+    getScheduledDeg = () => {
+        return (this._scheduled / this._budget) * 360;
     };
 
     addCurrent = (amount: number) => {
