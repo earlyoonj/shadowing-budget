@@ -1,6 +1,18 @@
 // TODO: locale 따라 처리
 const amountUnit = '원';
 
+const formatCurrent = (amount: number) => {
+    return `${amount.toLocaleString()}${amountUnit}`;
+};
+
+const formatScheduled = (amount: number) => {
+    return `(${amount.toLocaleString()}${amountUnit})`;
+};
+
+const formatBudget = (amount: number) => {
+    return `/${amount.toLocaleString()}${amountUnit}`;
+};
+
 class Amount {
     private _current: number;
     private _scheduled: number;
@@ -31,13 +43,15 @@ class Amount {
     }
 
     getCurrentStr = () => {
-        return `${this.current.toLocaleString()}${amountUnit}`;
+        return formatCurrent(this.current);
     };
+
     getScheduledStr = () => {
-        return `(${this._scheduled.toLocaleString()}${amountUnit})`;
+        return formatScheduled(this.scheduled);
     };
+
     getBudgetStr = () => {
-        return `/${this._budget.toLocaleString()}${amountUnit}`;
+        return formatBudget(this.budget);
     };
 
     getCurrentDeg = () => {
@@ -46,6 +60,24 @@ class Amount {
 
     getScheduledDeg = () => {
         return (this._scheduled / this._budget) * 360;
+    };
+
+    getLeftScheduled = () => {
+        return this._scheduled - this._current;
+    };
+
+    getLeftBudget = () => {
+        const bigger =
+            this._scheduled > this._current ? this._scheduled : this._current;
+        return this.budget - bigger;
+    };
+
+    getLeftScheduledStr = () => {
+        return formatScheduled(this.getLeftScheduled());
+    };
+
+    getLeftBudgetStr = () => {
+        return formatBudget(this.getLeftBudget());
     };
 
     addCurrent = (amount: number) => {
