@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import BudgetHeader from '../../components/Budget/BudgetHeader';
 import StatusCarousel from '../../components/Status/StatusCarousel';
+import TransactionLayout from '../../components/Transaction/TransactionLayout';
 
 function BudgetDetail() {
     const { budgetId } = useParams();
@@ -13,6 +14,7 @@ function BudgetDetail() {
             <main>
                 <StatusCarousel initialIndex={1} />
                 <hr />
+                <TransactionLayout />
             </main>
         </>
     );

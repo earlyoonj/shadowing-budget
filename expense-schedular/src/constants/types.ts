@@ -3,4 +3,9 @@ const BUDGET_TYPE = {
     EVENT: 'event',
 };
 
-export { BUDGET_TYPE };
+const TRANSACTION_TYPE = {
+    SCHEDULED: 'scheduled',
+    CURRENT: 'current',
+};
+
+export { BUDGET_TYPE, TRANSACTION_TYPE };

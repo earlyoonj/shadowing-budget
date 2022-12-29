@@ -9,6 +9,7 @@ import './index.css';
 import BudgetList from './screens/budget/BudgetList';
 import BudgetForm from './screens/budget/BudgetForm';
 import BudgetDetail from './screens/budget/BudgetDetail';
+import TransactionDetail from './components/Transaction/TransactionDetail';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
         path: '/budget/:budgetId',
         element: <BudgetDetail />,
+    },
+    {
+        path: '/budget/:budgetId/:transactionId',
+        element: <TransactionDetail />,
     },
 ]);
 
