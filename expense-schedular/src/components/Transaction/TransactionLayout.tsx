@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { TRANSACTION_TYPE } from '../../constants/types';
 import Category from '../../models/Category';
+import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
+import TransactionNav from './TransactionNav';
 
 const current = [
     {
@@ -74,7 +76,7 @@ const scheduled = [
 ];
 
 function TransactionLayout() {
-    const [isCurrent, setIsCurrent] = useState(true);
+    const [isCurrent, setIsCurrent] = useState(false);
 
     const clickScheduledHandler = () => {
         setIsCurrent(false);
@@ -84,38 +86,25 @@ function TransactionLayout() {
         setIsCurrent(true);
     };
 
+    const submitHandler = (event: React.FormEvent, isExpense: boolean) => {
+        event.preventDefault();
+        console.log(isExpense);
+    };
+
     return (
         <div>
-            <ul className="nav-tab">
-                <li>
-                    <input
-                        id="transaction-list-scheduled"
-                        type="radio"
-                        name="transaction-list"
-                    ></input>
-                    <label
-                        htmlFor="transaction-list-scheduled"
-                        onClick={clickScheduledHandler}
-                    >
-                        예정 내역
-                    </label>
-                </li>
-                <li>
-                    <input
-                        id="transaction-list-current"
-                        type="radio"
-                        name="transaction-list"
-                        defaultChecked={true}
-                    ></input>
-                    <label
-                        htmlFor="transaction-list-current"
-                        onClick={clickCurrentHandler}
-                    >
-                        거래 내역
-                    </label>
-                </li>
-            </ul>
+            <TransactionNav
+                isCurrent={isCurrent}
+                onClickScheduled={clickScheduledHandler}
+                onClickCurrent={clickCurrentHandler}
+            />
             <TransactionList transactions={isCurrent ? current : scheduled} />
+            <TransactionForm
+                isCurrent={isCurrent}
+                onClickScheduled={clickScheduledHandler}
+                onClickCurrent={clickCurrentHandler}
+                onSubmit={submitHandler}
+            />
         </div>
     );
 }

@@ -1,0 +1,50 @@
+.short {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40%;
+    padding: 1rem;
+}
+
+.short input {
+    margin-right: 0.6rem;
+}
+
+.short button {
+    font-size: 1rem;
+}
+
+.expand {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.expand .selects {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expand .selects input {
+    width: 80%;
+}
+
+.expand .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.expand .buttons button {
+    height: 4rem;
+}
+
+.expand .buttons .submit {
+    width: 100%;
+    margin-left: 0.2rem;
+    font-size: 1rem;
+}
+
+.expand .buttons .cancel {
+    width: 60%;
+    font-size: 1rem;
+}
