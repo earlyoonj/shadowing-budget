@@ -1,0 +1,73 @@
+.detail {
+    padding-top: 3.6rem;
+    padding-bottom: 0;
+}
+
+.back {
+    display: flex;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header .icon {
+    flex-shrink: 0;
+    flex-basis: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--background);
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    margin-left: 0.6rem;
+}
+
+.amount {
+    text-align: left;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.tabs {
+    display: flex;
+    margin: 0.8rem 0;
+}
+
+.tabs .divider {
+    margin: 0 0.8rem;
+}
+
+.tabs label {
+    padding: 0;
+    margin: 0 0.5rem;
+}
+
+.nav input:checked + label {
+    border-top: 0.1rem solid var(--primary);
+}
+
+.form > div {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form label {
+    margin: 0 0.8rem;
+    font-size: 1.2rem;
+}
+
+.form input,
+.form textarea {
+    flex-grow: 1;
+}
