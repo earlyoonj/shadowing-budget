@@ -2,6 +2,7 @@ import classes from './TransactionItem.module.css';
 import Category from '../../models/Category';
 import Tag from '../UI/Tag';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TransactionItem(props: {
     id: string;
@@ -13,6 +14,7 @@ function TransactionItem(props: {
     category?: Category;
     tags?: string[];
 }) {
+    const navigation = useNavigate();
     const [isShowOverlay, setIsShowOverlay] = useState(false);
 
     const icon = props.icon
@@ -22,6 +24,7 @@ function TransactionItem(props: {
         : '';
 
     const clickHandler = () => {
+        navigation('/budget/01/01');
         setIsShowOverlay(true);
     };
 

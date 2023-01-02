@@ -9,7 +9,7 @@ import './index.css';
 import BudgetList from './screens/budget/BudgetList';
 import BudgetForm from './screens/budget/BudgetForm';
 import BudgetDetail from './screens/budget/BudgetDetail';
-import TransactionDetail from './components/Transaction/TransactionDetail';
+import TransactionDetail from './screens/budget/TransactionDetail';
 
 const router = createBrowserRouter([
     {
