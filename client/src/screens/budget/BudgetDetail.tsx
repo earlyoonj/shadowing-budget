@@ -1,3 +1,4 @@
+import classes from './BudgetDetail.module.css';
 import { useParams } from 'react-router-dom';
 import BudgetHeader from '../../components/Budget/BudgetHeader';
 import StatusCarousel from '../../components/Status/StatusCarousel';
@@ -11,7 +12,7 @@ function BudgetDetail() {
                 startDate={new Date(2022, 11, 1)}
                 endDate={new Date(2022, 11, 31)}
             />
-            <main>
+            <main className={classes.container}>
                 <StatusCarousel initialIndex={1} />
                 <hr />
                 <TransactionLayout />

@@ -5,7 +5,7 @@ import CategoryStatus from './CategoryStatus';
 
 function StatusCarousel(props: { initialIndex: number }) {
     return (
-        <Carousel id="status" initialIndex={props.initialIndex} width="20rem">
+        <Carousel id="status" initialIndex={props.initialIndex}>
             <DateStatus />
             <TotalStatus />
             <CategoryStatus />

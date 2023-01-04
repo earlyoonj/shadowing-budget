@@ -92,7 +92,7 @@ function TransactionLayout() {
     };
 
     return (
-        <div>
+        <section>
             <TransactionNav
                 isCurrent={isCurrent}
                 onClickScheduled={clickScheduledHandler}
@@ -105,7 +105,7 @@ function TransactionLayout() {
                 onClickCurrent={clickCurrentHandler}
                 onSubmit={submitHandler}
             />
-        </div>
+        </section>
     );
 }
 

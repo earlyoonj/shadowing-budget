@@ -71,3 +71,18 @@
 .form textarea {
     flex-grow: 1;
 }
+
+@media screen and (min-width: 960px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .nav {
+        margin-top: 8rem;
+    }
+}

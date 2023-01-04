@@ -7,6 +7,7 @@
 }
 
 .short input {
+    width: 60%;
     margin-right: 0.6rem;
 }
 
@@ -47,4 +48,9 @@
 .expand .buttons .cancel {
     width: 60%;
     font-size: 1rem;
+}
+
+.expand .inputs {
+    overflow-y: scroll;
+    height: 60vh;
 }

@@ -1,0 +1,16 @@
+@media screen and (min-width: 960px) {
+    .container {
+        position: relative;
+        margin: 0 6rem;
+        display: flex;
+        height: 100%;
+    }
+
+    .container > section {
+        width: 50%;
+    }
+    
+    hr {
+        display: none;
+    }
+}

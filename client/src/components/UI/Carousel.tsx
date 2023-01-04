@@ -57,9 +57,8 @@ function Carousel(props: {
     children: React.ReactNode;
     id: string;
     initialIndex: number;
-    width: string;
 }) {
-    const { id: carouselId, initialIndex, width, children } = props;
+    const { id: carouselId, initialIndex, children } = props;
 
     const carouselItems = Array.isArray(children) ? children : [children];
 
@@ -83,7 +82,7 @@ function Carousel(props: {
     }, []);
 
     return (
-        <section className={classes.container} style={{ width }}>
+        <section className={classes.container}>
             <ol className={classes.carouselList}>
                 {carouselItems!.map((item: any, index: number) => {
                     const id = `${slideIdPrefix}${index}`;

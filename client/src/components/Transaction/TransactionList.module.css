@@ -12,3 +12,11 @@
     font-weight: 600;
     margin-bottom: 1rem;
 }
+
+@media screen and (min-width: 960px) {
+    .list {
+        height: 80%;
+        overflow-y: scroll;
+        margin-bottom: 0;
+    }
+}
